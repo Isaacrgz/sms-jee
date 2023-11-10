@@ -5,10 +5,6 @@ import jakarta.validation.constraints.Size;
 import java.io.Serializable;
 import java.util.List;
 
-/**
- *
- * @author isaac
- */
 @Entity
 @NamedQueries({
     @NamedQuery(name = "Person.findAll", query = "SELECT p FROM Person p"),
@@ -29,7 +25,7 @@ public class Person implements Serializable {
     @Basic(optional = false)
     @Size(max = 45)
     private String name;
-    //@Size(max = 45)
+    @Size(max = 45)
     private String lastname;
     @Size(max = 45)
     private String email;

@@ -21,6 +21,13 @@ public class TestTransactionClient {
             
             log.debug("Persona recuperada: " + persona1);
             
+            //Cambiar el apellido de una persona
+            persona1.setLastname("Perez");
+            
+            personService.modifyPerson(persona1);
+            log.debug("Objeto modificado: " + persona1);
+            log.debug("Fin de prueba transaccional");
+            
         } catch (NamingException ex) {
             log.debug(ex.getMessage());
         }
